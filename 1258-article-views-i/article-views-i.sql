@@ -5,4 +5,4 @@ FROM
 Views
 WHERE
 author_id=viewer_id
-order by author_id asc;
+order by id asc;
