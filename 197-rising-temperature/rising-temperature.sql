@@ -1,7 +1,7 @@
 -- Write your PostgreSQL query statement below
 SELECT 
-T1.id
+W1.id
 FROM 
-Weather T1, Weather T2
-WHERE 
-T1.recordDate-1 = T2.recordDate AND T1.temperature > T2.temperature ;
+Weather W1
+JOIN Weather W2 on W1.recordDate-1 = W2.recordDate 
+WHERE W1.temperature > W2.temperature ;
