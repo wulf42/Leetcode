@@ -11,7 +11,7 @@ WITH FirstOrders AS (
 )
 SELECT 
 ROUND(
-COUNT ( * ) FILTER (WHERE order_date=customer_pref_delivery_date ) *100.0
+COUNT ( order_date ) FILTER (WHERE order_date=customer_pref_delivery_date ) *100.0
 / COUNT (*) 
 ,2)
 as immediate_percentage 
